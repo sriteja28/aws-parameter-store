@@ -7,10 +7,10 @@ resource "aws_ssm_parameter" "param" {
 
 variable "params" {
   default = [
-    {name= "roboshop.dev.frontend.catalogue_url", value= "http://catalogue-dev.sritejadevops.com", type= "String"},
-    {name= "roboshop.dev.frontend.user_url", value= "http://user-dev.sritejadevops.com", type= "String"},
-    {name= "roboshop.dev.frontend.cart_url", value= "http://cart-dev.sritejadevops.com", type= "String"},
-    {name= "roboshop.dev.frontend.payment_url", value= "http://payment-dev.sritejadevops.com", type= "String"},
-    {name= "roboshop.dev.frontend.shipping_url", value= "http://shipping-dev.sritejadevops.com", type= "String"},
+    {name= "roboshop.dev.frontend.catalogue_url", value= "http://catalogue-dev.sritejadevops.com:8080/", type= "String"},
+    {name= "roboshop.dev.frontend.user_url", value= "http://user-dev.sritejadevops.com:8080/", type= "String"},
+    {name= "roboshop.dev.frontend.cart_url", value= "http://cart-dev.sritejadevops.com:8080/", type= "String"},
+    {name= "roboshop.dev.frontend.payment_url", value= "http://payment-dev.sritejadevops.com:8080/", type= "String"},
+    {name= "roboshop.dev.frontend.shipping_url", value= "http://shipping-dev.sritejadevops.com:8080/", type= "String"},
   ]
 }
