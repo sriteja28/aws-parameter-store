@@ -33,5 +33,7 @@ variable "params" {
 
     ## Passwords will never be a part of git repos, usually in organisations, we create them manually. Meaning who ever has access they will provision these secrets in paramter store
     { name= "roboshop.dev.payment.amqp_pass", value= "roboshop123", type= "SecureString"},
+    { name= "roboshop.dev.rabbitmq.amqp_user", value= "roboshop123", type= "String"},
+    { name= "roboshop.dev.rabbitmq.amqp_pass", value= "roboshop123", type= "SecureString"},
   ]
 }
