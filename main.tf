@@ -15,9 +15,9 @@ variable "params" {
     { name = "roboshop.dev.frontend.payment_url", value = "http://payment-dev.sritejadevops.com/", type = "String" },
     { name = "roboshop.dev.frontend.shipping_url", value = "http://shipping-dev.sritejadevops.com/", type = "String" },
 
-    { name = "roboshop.dev.cart.redis_host", value = "redis-dev.sritejadevops.com", type = "String" },
+    { name = "roboshop.dev.cart.redis_host", value = "elasticache-dev.kwnyfg.clustercfg.use1.cache.amazonaws.com", type = "String" },
     { name = "roboshop.dev.cart.catalogue_host", value = "catalogue-dev.sritejadevops.com", type = "String" },
-    { name = "roboshop.dev.cart.catalogue_port", value = "8080", type = "String" },
+    { name = "roboshop.dev.cart.catalogue_port", value = "80", type = "String" },
 
     { name = "roboshop.dev.catalogue.mongo", value = "true", type = "String" },
 
@@ -28,14 +28,14 @@ variable "params" {
     { name = "roboshop.dev.payment.amqp_host", value = "rabbitmq-dev.sritejadevops.com", type = "String" },
     { name = "roboshop.dev.payment.amqp_user", value = "roboshop", type = "String" },
     { name = "roboshop.dev.shipping.cart_endpoint", value = "cart-dev.sritejadevops.com:80", type = "String" },
-    { name = "roboshop.dev.shipping.db_host", value = "rds-prod.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
+    { name = "roboshop.dev.shipping.db_host", value = "rds-dev.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
     { name = "roboshop.dev.user.mongo", value = "true", type = "String" },
-    { name = "roboshop.dev.user.redis_host", value = "redis-dev.sritejadevops.com", type = "String" },
+    { name = "roboshop.dev.user.redis_host", value = "elasticache-dev.kwnyfg.clustercfg.use1.cache.amazonaws.com", type = "String" },
     //{ name = "roboshop.dev.user.mongo_url", value = "mongodb://mongodb-dev.sritejadevops.com:27017/users", type = "String" },
     { name = "roboshop.dev.rabbitmq.amqp_user", value = "roboshop", type = "String" },
     { name = "roboshop.dev.mysql.username", value = "roboshop", type = "String" },
     { name = "roboshop.dev.docdb.username", value = "roboshop", type = "String" },
-    { name = "roboshop.dev.mysql.endpoint", value = "rds-prod.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
+    { name = "roboshop.dev.mysql.endpoint", value = "rds-dev.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
 
     ## Passwords will never be a part of git repos, usually in organisations, we create them manually. Meaning who ever has access they will provision these secrets in paramter store
     { name = "roboshop.dev.payment.amqp_pass", value = "roboshop123", type = "SecureString" },
