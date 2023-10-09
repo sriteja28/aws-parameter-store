@@ -49,5 +49,44 @@ variable "params" {
 
     { name = "roboshop.dev.user.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-dev.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
     { name = "roboshop.dev.user.docdb_endpoint", value = "docdb-dev.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com", type = "String" },
+
+
+
+
+
+    ###
+    { name = "roboshop.prod.frontend.catalogue_url", value = "http://catalogue-prod.sritejadevops.com/", type = "String" },
+    { name = "roboshop.prod.frontend.user_url", value = "http://user-prod.sritejadevops.com/", type = "String" },
+    { name = "roboshop.prod.frontend.cart_url", value = "http://cart-prod.sritejadevops.com/", type = "String" },
+    { name = "roboshop.prod.frontend.payment_url", value = "http://payment-prod.sritejadevops.com/", type = "String" },
+    { name = "roboshop.prod.frontend.shipping_url", value = "http://shipping-prod.sritejadevops.com/", type = "String" },
+    { name = "roboshop.prod.cart.redis_host", value = "elasticache-prod.kwnyfg.clustercfg.use1.cache.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.cart.catalogue_host", value = "catalogue-prod.sritejadevops.com", type = "String" },
+    { name = "roboshop.prod.cart.catalogue_port", value = "80", type = "String" },
+    { name = "roboshop.prod.catalogue.mongo", value = "true", type = "String" },
+    { name = "roboshop.prod.payment.cart_host", value = "cart-prod.sritejadevops.com", type = "String" },
+    { name = "roboshop.prod.payment.cart_port", value = "80", type = "String" },
+    { name = "roboshop.prod.payment.user_host", value = "user-prod.sritejadevops.com", type = "String" },
+    { name = "roboshop.prod.payment.user_port", value = "80", type = "String" },
+    { name = "roboshop.prod.payment.amqp_host", value = "rabbitmq-prod.sritejadevops.com", type = "String" },
+    { name = "roboshop.prod.payment.amqp_user", value = "roboshop", type = "String" },
+    { name = "roboshop.prod.shipping.cart_endpoint", value = "cart-prod.sritejadevops.com:80", type = "String" },
+    { name = "roboshop.prod.shipping.db_host", value = "rds-prod.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.user.mongo", value = "true", type = "String" },
+    { name = "roboshop.prod.user.redis_host", value = "elasticache-prod.kwnyfg.clustercfg.use1.cache.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.rabbitmq.amqp_user", value = "roboshop", type = "String" },
+    { name = "roboshop.prod.mysql.username", value = "roboshop", type = "String" },
+    { name = "roboshop.prod.docdb.username", value = "roboshop", type = "String" },
+    { name = "roboshop.prod.mysql.endpoint", value = "rds-prod.cluster-czrx5mbvxqcb.us-east-1.rds.amazonaws.com", type = "String" },
+
+    ## Passwords will never be a part of git repos, usually in organisations, we create them manually. Meaning who ever has access they will provision these secrets in paramter store
+    { name = "roboshop.prod.payment.amqp_pass", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.prod.rabbitmq.amqp_pass", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.prod.mysql.password", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.prod.docdb.password", value = "roboshop123", type = "SecureString" },
+    { name = "roboshop.prod.catalogue.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
+    { name = "roboshop.prod.catalogue.docdb_endpoint", value = "docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com", type = "String" },
+    { name = "roboshop.prod.user.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
+    { name = "roboshop.prod.user.docdb_endpoint", value = "docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com", type = "String" },
   ]
 }
