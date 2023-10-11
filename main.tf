@@ -88,5 +88,10 @@ variable "params" {
     { name = "roboshop.prod.catalogue.docdb_endpoint", value = "docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com", type = "String" },
     { name = "roboshop.prod.user.mongo_url", value = "mongodb://roboshop:roboshop123@docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false", type = "SecureString" },
     { name = "roboshop.prod.user.docdb_endpoint", value = "docdb-prod.cluster-czrx5mbvxqcb.us-east-1.docdb.amazonaws.com", type = "String" },
+
+  ## Nexus
+    { name = "roboshop.nexus.username", value = "admin", type = "String" },
+    { name = "roboshop.nexus.password", value = "admin123", type = "SecureString" },
+
   ]
 }
